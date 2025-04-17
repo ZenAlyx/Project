@@ -1,0 +1,14 @@
+{
+  "name": "Ubuntu 22.04 Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "echo 'Ubuntu 22.04 container siap!'",
+  "remoteUser": "vscode"
+}
